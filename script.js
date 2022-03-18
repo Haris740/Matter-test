@@ -10,7 +10,8 @@ let engine = Matter.Engine.create();
         }
       });
       
-      let ground = Matter.Bodies.rectangle(0, 700, 2400, 33, {isStatic: true}); 
+      let ground = Matter.Bodies.rectangle(0, 700, 2400, 33, {isStatic: true});
+      let car = Matter.Composites.car(0, 0, 50, 60, 38);
       
       let ball = Matter.Bodies.circle(300, 600,20);
       let sling = Matter.Constraint.create({ 
@@ -42,6 +43,6 @@ let engine = Matter.Engine.create();
         }
       });
 
-      Matter.World.add(engine.world, [ground, ball, sling, mouseConstraint]);
+      Matter.World.add(engine.world, [ground, ball, sling, mouseConstraint, car]);
       Matter.Engine.run(engine);
       Matter.Render.run(render);
