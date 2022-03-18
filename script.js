@@ -42,6 +42,6 @@ let engine = Matter.Engine.create();
         }
       });
 
-      Matter.World.add(engine.world, [ground, ball, sling, mouseConstraint, Composites.car(0, 0, 50, 60, 15)]);
+      Matter.World.add(engine.world, [ground, ball, sling, mouseConstraint]);
       Matter.Engine.run(engine);
       Matter.Render.run(render);
