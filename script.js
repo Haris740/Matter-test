@@ -10,7 +10,7 @@ let engine = Matter.Engine.create();
         }
       });
       
-      let ground = Matter.Bodies.rectangle(0, 500, 2400, 33, {isStatic: true}); 
+      let ground = Matter.Bodies.rectangle(0, 700, 2400, 33, {isStatic: true}); 
       
       let ball = Matter.Bodies.circle(300, 600,20);
       let sling = Matter.Constraint.create({ 
